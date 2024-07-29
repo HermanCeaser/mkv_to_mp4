@@ -16,6 +16,11 @@ fn main() {
         }
     }
 
+    if files.is_empty() {
+        println!("No valid .mkv files found in the current directory.");
+        return;
+    }
+
     print!("Do you wish original .mkv files to be deleted when finished? [y/N]: ");
     io::stdout().flush().unwrap();
     let mut answer = String::new();
